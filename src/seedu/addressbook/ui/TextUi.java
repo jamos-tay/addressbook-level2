@@ -110,6 +110,10 @@ public class TextUi {
         showToUser(MESSAGE_INIT_FAILED, DIVIDER, DIVIDER);
     }
 
+    public void showFileNotFoundMessage() {
+        showToUser(MESSAGE_FILE_NOT_FOUND, DIVIDER, DIVIDER);
+    }
+
     /** Shows message(s) to the user */
     public void showToUser(String... message) {
         for (String m : message) {
