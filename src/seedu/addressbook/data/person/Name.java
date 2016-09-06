@@ -3,6 +3,7 @@ package seedu.addressbook.data.person;
 import seedu.addressbook.data.exception.IllegalValueException;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -62,7 +63,7 @@ public class Name {
     }
 
 	public boolean isSimilar(Name otherName) {
-		return fullName.toLowerCase().equals(otherName.toString().toLowerCase());
+		return otherName.toString().toLowerCase().contains(fullName.toLowerCase());
 	}
 
 }
