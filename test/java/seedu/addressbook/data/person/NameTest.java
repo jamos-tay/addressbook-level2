@@ -36,4 +36,11 @@ public class NameTest {
         Name name2 = new Name("Bob");
         assertTrue(name1.isSimilar(name2));
     }
+	
+	@Test
+    public void name_padded_returnsFalse() throws IllegalValueException {
+        Name name1 = new Name("Bob      George        ");
+        Name name2 = new Name("      Alex");
+        assertTrue(name1.isSimilar(name2));
+    }
 }
