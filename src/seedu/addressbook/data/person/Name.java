@@ -61,4 +61,8 @@ public class Name {
         return fullName.hashCode();
     }
 
+	public boolean isSimilar(Name otherName) {
+		return fullName == otherName.toString();
+	}
+
 }
