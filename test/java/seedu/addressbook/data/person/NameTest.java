@@ -22,4 +22,11 @@ public class NameTest {
         Name name2 = new Name("test");
         assertTrue(name1.isSimilar(name2));
     }
+	
+	@Test
+    public void name_subset_returnsTrue() throws IllegalValueException {
+        Name name1 = new Name("Bob");
+        Name name2 = new Name("Bob George");
+        assertTrue(name1.isSimilar(name2));
+    }
 }
