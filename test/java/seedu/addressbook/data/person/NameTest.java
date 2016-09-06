@@ -29,4 +29,11 @@ public class NameTest {
         Name name2 = new Name("Bob George");
         assertTrue(name1.isSimilar(name2));
     }
+	
+	@Test
+    public void name_superset_returnsTrue() throws IllegalValueException {
+        Name name1 = new Name("Bob George");
+        Name name2 = new Name("Bob");
+        assertTrue(name1.isSimilar(name2));
+    }
 }
