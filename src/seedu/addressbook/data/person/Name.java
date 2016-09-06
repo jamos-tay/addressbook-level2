@@ -63,11 +63,15 @@ public class Name {
     }
 
 	public boolean isSimilar(Name otherName) {
+		String name1 = fullName;
+		String name2 = otherName.toString();
+		name1 = name1.toLowerCase();
+		name2 = name2.toLowerCase();
 		HashSet<String> nameParts = new HashSet<String>();
-		for(String part : fullName.toLowerCase().split(" ")){
+		for(String part : name1.split(" ")){
 			nameParts.add(part);
 		}
-		for(String part : otherName.toString().toLowerCase().split(" ")){
+		for(String part : name2.split(" ")){
 			if(nameParts.contains(part)){
 				return true;
 			}
